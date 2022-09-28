@@ -1,0 +1,249 @@
+/* === фоновое видео === */
+.main--video {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	justify-content: center;
+	min-height: 600px;
+}
+.main--video video {
+	width: 100%;
+	vertical-align: middle;
+	height: 600px;
+	object-fit: cover;
+}
+/* === /фоновое видео === */
+
+
+/* === левое и правое окна территория|столовая === */
+.main--video-window {
+	border-radius: 10px;
+	top: 40px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 10px;
+	width: 380px;
+	height: 520px;
+	color: black;
+
+	/* блюр */
+	background: rgba(255, 255, 255, 80%);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 4px 20px 1px black;
+}
+
+.window-left {
+	right: 40px;
+}
+
+.window-right {
+	left: 40px;
+}
+
+	/* содержимое окон */
+.main--video-window-text1 {
+	font-size: 32px;
+	font-weight: bold;
+	margin: 10px;
+	text-align: center;
+}
+
+.main--video-pictures{
+	width: 400px;
+	height: 250px;
+}
+
+.main--video-window-text2 {
+	max-width: 400px;
+	text-align: center;
+	height: 70px;
+}
+	/* /содержимое окон */
+/* === /левое и правое окна территория|столовая === */
+
+
+	/* === кнопка "3D-тур" === */
+.main--video-button {
+	display: flex;
+	align-items: center;
+	width: 300px;
+	margin-bottom: 15px;
+}
+
+.main--video-button .button_text{
+	width: 100%;
+}
+.main--video-button div.button_text::before{
+	background-color: black;
+}
+.main--video-button div.border_button {
+	border-color: black;
+}
+.main--video-button div.primary {
+	color: black;
+}
+.main--video-button div.secondary  {
+	color: white;
+}
+	/* === /кнопка "3D-тур" === */
+
+	/* новый вариант */
+	/* @media(max-width:1200px){
+	.main--video{
+		min-height: 600px;
+	}
+	.main--video video{
+		height: 600px;
+	}
+
+	.main--video-window{
+		width: 300px;
+    	height: 460px;
+	}
+	.main--video-pictures {
+		width: 320px;
+		height: 200px;
+	}	
+	.main--video-window-text2 {
+		height: 85px;
+	}
+	}
+	@media(max-width:950px){
+	.main--video-window {
+	padding: 0px;
+    width: 88%;
+    height: 40%;
+    align-items: flex-start;
+	}
+	.main--video-window-text1 {
+		font-size: 26px;
+		width: 164px;
+		margin: 65px;
+	}
+	.main--video-pictures {
+		position: absolute;
+    	border-radius: 10px;
+    	top: 20px;
+    	right: 10px;
+	}
+	.main--video-window-text2 {
+		display: none;
+  		align-items: center;
+		height: 100%;
+		padding: 5px;
+		font-size: 14px;
+	}	
+	.window-right {
+		left: auto;
+		right: 40px;
+		top: 300px;
+	}
+	@media(max-width:720px){
+		.main--video-pictures {
+			width: 40%;
+		}
+		.main--video-window-text1 {
+			margin: 50px;
+		}
+	}
+	} */
+
+
+/* === адаптация под разные размеры экранов === */
+@media(max-width:900px){
+	.main--video {
+		display: none;
+	}
+	.main--video video{
+		display: none;
+	}
+}
+/* @media(max-width:900px){
+	.main--video video{
+		display: none;
+	}
+	.main--video {
+		display: none;
+		flex-direction: column;
+	}
+
+	.main--video-window {
+		position: relative;
+		box-shadow: none;
+		height: auto;
+		top: 0px;
+		padding: 5px;
+		background: none;
+    	backdrop-filter: none;
+	}
+
+	.window-left {
+		right: 0px;
+		width: 50%;
+		margin-bottom: 50px;
+	}
+	
+	.window-right {
+		left: 50%;
+		width: 50%;
+		margin-bottom: 60px;
+	}
+
+	.window-right .main--video-pictures{
+		left: -88%;
+	}
+
+	.window-left .main--video-pictures{
+		right: -85%;
+	}
+
+	.main--video-pictures{
+		position: absolute;
+    	width: 80%;
+		border-radius: 10px;
+	}
+	.border_button {
+		width: 80%;
+	}
+} */
+
+@media(max-width:500px){
+	.main--video-window {
+		position: relative;
+		box-shadow: none;
+		height: auto;
+		top: 0px;
+		padding: 0px;
+	}
+	.main--video {
+		display: flex;
+		flex-direction: column;
+	}
+	.main--video-pictures{
+		position: relative;
+	}
+	.window-right .main--video-pictures{
+		left: 0%;
+	}
+
+	.window-left .main--video-pictures{
+		right: 0%;
+	}
+	.window-left, .window-right {
+		right: 0px;
+		left: 0px;
+		width: 100%;
+	}
+	.main--video-window-text2 {
+		margin: 0 20px;
+	}
+
+	.window-right {
+		margin-bottom: 20px;
+	}
+	.window-left {
+		margin-bottom: 0px;
+	}
+}

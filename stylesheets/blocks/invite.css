@@ -1,0 +1,256 @@
+.invite-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 0 20px;
+    height: 100px;
+}
+
+.invite--block1 {
+    width: 30%;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.invite--block2 {
+    width: 30%;
+}
+
+.invite--block3 {
+    width: 30%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    height: 200%;
+}
+.invite--schema-up{
+    position: relative;
+    bottom: -4px;
+    flex-grow: 1;
+    background: no-repeat bottom url("../../images/svg/schema_up.svg");
+    background-size: 100%;
+}
+.invite--schema-down{
+    position: relative;
+    top: -4px;
+    flex-grow: 1;
+    background: no-repeat top url("../../images/svg/schema_down.svg");
+    background-size: 100%;
+}
+
+/* === Настройка шрифтов и цвета текста === */
+.invite--block1 h2{
+    text-align: center;
+    font-size: 34px;
+}
+
+.invite--block2 p{
+    text-align: center;
+    font-size: 19px;
+}
+
+/* === /Настройка шрифтов и цвета текста === */
+
+    /* === Кнопка === */
+.invite--block3 .button_text {
+    margin: 0;
+    min-width: 200px;
+    background-color: white;
+    z-index: 4;
+}
+
+.invite .border_button{
+    border: 2px solid black;
+}
+
+.invite .primary{
+    color: black;
+}
+
+.invite .button_text::before {
+    background-color: black;
+}
+
+.invite .secondary{
+    color: white;
+}
+
+
+@media(min-width:1100px){
+    .invite--block1, .invite--block3{
+        width: 300px;
+    }
+}
+
+@media(max-width:800px){
+    .invite-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .invite--block1{
+        width: auto;
+    }
+    .invite--block2 {
+        width: 50%;
+    }
+
+    .invite--block3 {
+        width: 200px;
+    }
+    .invite--block1 h2{
+        margin: 0;
+    }
+
+    .line-min {
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
+    .line-medium {
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
+}
+@media(max-width:560px){
+.invite--block1 {
+    width: 100%;
+}
+.invite--block2 {
+    width: 100%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .invite {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    overflow: hidden;
+}
+
+.invite-right {
+    position: relative;
+    box-shadow: black 0px 3px 11px 0px;
+    height: 85%;
+}
+
+.invite-left {
+    width: 33%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.invite-text,
+.invite-headText {
+    text-align: center;
+}
+
+.invite-text {
+    padding: 0 10%;
+    font-size: 20px;
+}
+
+.invite-headText {
+    font-size: 36px;
+    margin: 0;
+}
+
+.invite-left .button_text {
+    font-size: 20px;
+    width: 60%;
+}
+.blur-box{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .invite-text {
+        padding: 0;
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .invite-headText {
+        font-size: 30px;
+    }
+
+    .invite-right {
+        height: 80%;
+    }
+
+    .invite {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .blur-box{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../images/blocks/invite.jpg");
+        filter:brightness(0.4) blur(5px);
+        transform: scale(1.1); 
+    }
+    .invite-left {
+        padding: 15px;
+        width: 50%;
+        height: 70%;
+    }
+    .invite-text {
+        display: none;
+    }
+    .invite-right {
+        display: none;
+    }
+    .invite-headText {
+        margin: 0;
+        font-size: 35px;
+        color: white;
+    }
+    .invite-left .button_text{
+        width: 80%;
+    }
+} */

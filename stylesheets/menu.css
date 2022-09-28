@@ -1,0 +1,128 @@
+/* заголовок */
+header {
+	width: 100%;
+
+	position: absolute;
+	
+	z-index: 1;
+}
+
+/* кнопка меню */
+header nav.sections span.menu {
+	/* шрифт */
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+
+	/* позиционирование */
+	position: absolute;
+	top: 53px;
+	right: 60px;
+}
+header nav.sections label.button-menu {
+	width: 25px;
+
+	cursor: pointer;
+	
+	/* позиционирование */
+	padding: 5px;
+	position: absolute;
+	top: 50px;
+	right: 20px;
+}
+header nav.sections label.button-menu span {
+	border: 1px solid transparent;
+	border-radius: 5px;
+	background-color: white;
+	
+	/* позиционирование */
+	display: block;
+	height: 3px;
+	margin: 3px 0 0;
+	position: relative;
+}
+header nav.sections label.button-menu span.top {
+	margin-top: 0;
+}  
+
+/* меню */
+header nav.sections { 
+	/* шрифт */
+	font-size: 16px;
+	
+	/* позиционирование */
+	position: relative;
+	padding-top: 10px;
+}
+header nav.sections ul.sections {
+	list-style: none;
+
+	/* позиционирование */
+	top: 76px;
+	position: fixed;
+	padding: 15px 0 0;
+	margin: 0;
+
+	/* спрятать */
+	right: -250px;
+
+	/* выдвижение */
+	transition: right 1s;
+}
+header nav.sections ul.sections li {
+	width: max-content;
+
+	margin: 5px 60px 5px auto;
+}
+header nav.sections ul.sections li span.nav-sections {
+    font-weight: bold;
+}
+header nav.sections ul.sections li span.nav-sections span.border {
+	color: white;
+}
+header nav.sections ul.sections li span.nav-sections span.border a {
+	color: white;
+
+    text-decoration-line: none;
+}
+
+/* выдвижение меню */
+header nav.sections:hover ul.sections {
+	right: 0;
+}
+
+/* анимация кнопки */
+header nav.sections:hover label.button-menu span.top {
+	/* позиционирование */
+	transform: rotate(30deg);
+	top: 3px;
+	left: 1px;
+}
+header nav.sections:hover label.button-menu span.middle {
+	/* прозрачность */
+	filter: alpha(Opacity=0);
+	opacity: 0;
+}
+header nav.sections:hover label.button-menu span.bottom {
+	/* позиционирование */
+	transform: rotate(-30deg);   
+	top: -3px;
+	left: 1px;
+}
+
+/* ссылки */
+header nav.sections ul.sections li:hover span.nav-sections span.border {
+    border-bottom: 2px solid;
+
+    cursor: pointer;
+
+	/* шрифт */
+	color: white;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 650px) {
+	.menu{
+		display: none;
+	}
+}

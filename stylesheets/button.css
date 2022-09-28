@@ -1,0 +1,90 @@
+.button_text {
+	min-width: 105px;
+	height: 35px;
+	margin: 0 10px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	cursor: pointer;  
+
+	font-size: xx-large;
+	font-family: Montserrat Regular, sans-serif;
+	font-weight: bold;
+	
+	overflow: hidden;
+}
+
+.border_button {
+	width: 100%;
+	height: 31px;
+	
+	border: 2px solid white;
+}
+.border_button-dark {
+	border: 2px solid var(--blue-dark);
+}
+
+/* текст */
+.text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	
+	font-size: large;
+
+	transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+.primary {
+	top: 5px;
+
+	color: white;
+}
+.primary-dark {
+	color: var(--blue-dark);
+}
+.secondary {
+	top: 35px;
+
+	color: black;
+}
+
+/* наведение */
+.button_text:hover .primary {
+	top: -35px;
+}
+.button_text:hover .secondary {
+	top: 7px;
+}
+.button_text:hover .bg_button{
+	top: 7px;
+}
+.button_text:hover::before {
+	height: 100%;
+
+	bottom: 0;
+}
+.button_text::before {
+	height: 0;
+	width: 100%;
+
+	position: absolute;
+	bottom: 0;
+
+	content: '';
+
+	background-color: white;
+
+	transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+.button_text-dark::before {
+	background-color: var(--blue-dark);
+}

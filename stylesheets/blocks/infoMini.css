@@ -1,0 +1,80 @@
+
+    /* Внешний отступ всего блока*/
+.infoMini {
+    display: none;
+    margin-bottom: 40px;
+}
+
+.infoMini-container{
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoMini img{
+    height: 200px;
+}
+    /* === Настройка шрифтов и цвета текста === */
+.infoMini-container h2{
+    margin: 0px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #0070AF;
+    opacity: 0.8;
+}
+
+.infoMini-container p{
+    margin: 0px;
+    font-size: 20px;
+    color: #000000;
+    text-align: right;
+}
+    /* === /Настройка шрифтов и цвета текста === */
+
+.infoMini--text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+.infoMini--text:nth-child(5){
+    text-align: right;
+}
+
+    /* === Кнопка === */
+.infoMini .button_text {
+    margin-top: 30px;
+    min-width: 250px;
+}
+
+.infoMini .border_button{
+    border: 2px solid black;
+}
+
+.infoMini .primary{
+    color: black;
+
+}
+
+.infoMini .button_text::before {
+    background-color: black;
+}
+
+.infoMini .secondary{
+    color: white;
+}
+
+    /* === /Кнопка === */
+
+
+    /* Отключаем <class="info"> */
+@media(max-width:700px){
+    .info--container {
+        display: none;
+    }
+
+    .infoMini {
+        display: block;
+    }
+}

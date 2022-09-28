@@ -1,0 +1,210 @@
+/* фоновое видео */
+.bgVideo {
+	position: relative;
+	height: 120vh;
+	width: 100%;
+}
+.bgVideo video {
+	height: 100%;
+	width: 100%;
+	filter: brightness(0.4);
+	object-fit: cover;
+	object-position: center center;
+}
+.bgVideo h1 {
+	margin: 0 auto;
+
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	
+	/* шрифт */
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	font-size: 40px;
+}
+
+
+.bgVideo--footer{
+	position: absolute;
+	bottom: 225px;
+	display: flex;
+	justify-content: center;
+	height: 100px;
+	width:100%
+}
+.bgVideo--block{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+	
+	background-color: rgb(255, 255, 255,0.2);
+	box-shadow: 0px 0px 1px 1px inset white;
+	color: white;
+	min-width: 225px;
+	max-width: 15%;
+	padding: 0 10px;
+	margin: 0 10px;
+	flex-grow: 1;
+	transition: all linear 1s
+}
+.bgVideo--block-double{
+	width: 225px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+	
+}
+.bgVideo--block-double .bgVideo--block{
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+	height: 50%;
+}
+
+.bgVideo--block-blue{
+	max-width: none;
+	background-color: rgb(0,112, 175, 0.2);
+	width: 35%;
+}
+.bgVideo--block-double .button_text{
+	width: 100%;
+	background-color: white;
+}
+.bgVideo--block-double .border_button{
+	border: 1px solid white;
+}
+.bgVideo--block-double .primary{
+	color: black;
+}
+.bgVideo--block-double .secondary{
+	color: white;
+}
+.bgVideo--block-double .button_text::before{
+	background-color: var(--blue-dark);
+}
+/* стрелки */
+
+.bgVideo-arrow {
+	position: absolute;
+	width: 120px;
+	height: 75px;
+	background: url(../../images/svg/bgArrow/Arrow_1.svg), url(../../images/svg/bgArrow/Arrow_2.svg) ;
+	background-repeat: no-repeat;
+	background-position: 0 center, 0 center ;
+	cursor: pointer;
+	background-repeat: repeat-x;
+	animation: move 7s linear infinite;
+
+}
+.bgVideo-arrow:hover{
+	animation: move 1s linear infinite;
+}
+@keyframes move {
+	100% {background-position: -108px center , -71px center } /*1 число - размер svg*/
+}
+@-webkit-keyframes move {
+	100% {background-position: center 150px}
+}
+@-o-keyframes move {
+	100% {background-position: center 150px}
+}
+@-moz-keyframes move {
+	100% {background-position: center 150px}
+} 
+.bgVideo-arrowLeft {
+	top: 40%;
+	left: 40px;
+
+}
+.bgVideo-arrowRight {
+	top: 40%;
+	right: 40px;
+	transform:rotate(180deg);
+}
+.bgVideo-arrowDown {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	transform:rotate(-90deg);
+}
+
+
+@keyframes down {
+	100% {background-position: center -190%}
+}
+@-webkit-keyframes down {
+	100% {background-position: center -190%}
+}
+@-o-keyframes down {
+	100% {background-position: center -190%}
+}
+@-moz-keyframes down {
+	100% {background-position: center -190%}
+} 
+
+@media screen and (max-width: 1100px) {
+	.bgVideo--block{
+		min-width: 150px;
+		max-width:none;
+	}
+	.bgVideo h1{
+		font-size: 30px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.bgVideo-arrowLeft,.bgVideo-arrowRight{
+		display: none;
+	}
+	.bgVideo h1{
+		font-size: 30px;
+	}
+	.bgVideo--footer{
+		flex-wrap: wrap;
+	}
+	.bgVideo--block{
+		width: 200px;
+		margin: 10px ;
+	}
+	.bgVideo--block-blue{
+		width: 400px;
+		margin: 10px 0 10px 10px;
+	}
+	.bgVideo--block-double{
+		margin: 10px 0;
+		width: 200px;
+	}
+	.bgVideo--block-double .bgVideo--block{
+		max-width: none;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 750px) {
+	.bgVideo--footer :nth-child(3){
+		display:none;
+	}
+	.bgVideo--block-blue{
+		margin: 10px;
+	}
+}
+@media screen and (max-width: 650px) {
+	.bgVideo h1{
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 520px) {
+	.bgVideo--block-blue,.bgVideo-arrowDown, .bgVideo--footer>:last-child{
+		display: none;
+	}
+	.bgVideo--block-double{
+		width: 80%;
+	}
+}

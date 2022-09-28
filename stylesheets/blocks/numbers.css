@@ -1,0 +1,64 @@
+.numbers {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-bottom: 50px;
+}
+.numbers h2 {
+    width: 100%;
+    margin: 3vh 0 0 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.number {
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 3vh 50px 0;
+}
+.number img {
+    width: 50px;
+    height: 50px;
+
+    position: relative;
+
+    margin: 0;
+}
+.number p {
+    margin: auto 0;
+
+    text-align: center;
+}
+.number p {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+    .number {
+        margin: 3vh 0 0;
+    }
+}
+    @media screen and (max-width: 650px) {
+    .numbers h2 {
+        font-size: 1rem;
+    }
+    .number {
+        width: 120px;
+
+        margin: 3vh 0 0;
+    }
+    .number img {
+        width: 35px;
+        height: 35px;
+    }
+    .number p {
+        font-size: 14px;
+    }
+}

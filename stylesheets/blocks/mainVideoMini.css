@@ -1,0 +1,110 @@
+/* === фоновое видео === */
+.main--videoMini {
+	display: none;
+}
+@media (min-width: 500px) and (max-width: 900px){
+.main--videoMini {
+	display: flex;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	justify-content: center;
+	min-height: 640px;
+}
+.main--videoMini video {
+	width: 100%;
+	vertical-align: middle;
+	height: 640px;
+	object-fit: cover;
+}
+/* === /фоновое видео === */
+
+.main--videoMini-container {
+	margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+/* === левое и правое окна территория|столовая === */
+.main--videoMini-window {
+	border-radius: 10px;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+    flex-direction: row;
+    width: 95%;
+    height: 280px;
+    color: black;
+    
+
+	/* блюр */
+	background: rgba(255, 255, 255, 80%);
+    backdrop-filter: blur(5px);
+    box-shadow: 2px 4px 20px 1px black;
+}
+
+.window-leftMini {
+}
+
+.window-rightMini {
+	top: 320px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+	/* содержимое окон */
+.main--videoMini-window-text1 {
+	font-size: 32px;
+	font-weight: bold;
+	margin: 10px;
+	text-align: center;
+}
+
+.main--videoMini-pictures {
+	margin: 10px;
+    border-radius: 10px;
+    width: 43%;
+    height: 90%;
+}
+
+.main--videoMini-window-text2 {
+	max-width: 400px;
+	text-align: center;
+	padding: auto;
+}
+	/* /содержимое окон */
+/* === /левое и правое окна территория|столовая === */
+
+
+	/* === кнопка "3D-тур" === */
+.main--videoMini-button {
+	display: flex;
+	align-items: center;
+	width: 300px;
+	margin-bottom: 15px;
+}
+
+.main--videoMini-button .button_text{
+	width: 100%;
+	height: 34px;
+}
+.main--videoMini-button div.button_text::before{
+	background-color: black;
+	width: 70%;
+}
+.main--videoMini-button div.border_button {
+	border-color: black;
+	width: 70%;
+}
+.main--videoMini-button div.primary {
+	color: black;
+}
+.main--videoMini-button div.secondary  {
+	color: white;
+}
+}

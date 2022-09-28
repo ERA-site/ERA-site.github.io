@@ -1,0 +1,173 @@
+.quote {
+    background-color: white;
+}
+
+.quote--container {
+    display: flex;
+    flex-direction: row;
+}
+
+.quote--main-about{
+    display: flex;
+    flex-direction: column; 
+    background-color: #505050;
+    width: 25%;
+    margin: 20px 20px 20px 0;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+
+.quote--main-about:first-child{
+    margin: 0 20px 0 40px;
+}
+
+.quote--main-about p{
+    color: white;
+    font-size: 18px;
+}
+
+.quote--main-about li{
+    color: white;
+    font-size: 16px;
+}
+
+.quote--main-txtColor {
+    color: #1a69df;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.quote--main-quote{
+    display: flex;
+    width: 50%;
+
+    color: white;
+} 
+
+.quote--main-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 410px;
+    background-color: #0d4599;
+}
+
+.quote--main-container::before{
+    content: '';
+    position: absolute;
+    border-bottom: 410px solid transparent;
+    border-left: 120px solid white;
+	height: 0;
+	width: 100px;
+}
+
+.quote--main-blog {
+    margin: 23px 40px 0 260px;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    border-radius: 10px;
+    background-color: rgb(207, 206, 206);
+
+    
+}
+
+.quote--main-blog2{
+    margin: 23px 40px 0 210px;
+}
+
+.quote--main-blog3{
+    margin: 23px 40px 0 160px;
+}
+
+.quote--main-blog-txt1{
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+    width: 65%;
+    font-size: 12px;
+    margin: 10px;
+}
+
+.quote--main-blog-line hr{
+
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    border: 2px solid #0d4599;
+}
+
+.quote--main-blog-txt2{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 2% 2%;
+}
+
+h2.quote--main-blog-txt-h {
+    margin: 0px auto;
+    /* В.В.Путин */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 900;
+font-size: 20px;
+
+color: #FFFFFF;
+}
+
+.quote--main-blog-txt-p {
+    margin: 0px auto;
+    /* Президент Российской Федерации */
+font-size: 12px;
+text-align: right;
+
+color: #000000;
+}
+
+.quote--main-blog-pictures {
+    display: flex;
+    align-items: center;
+}
+
+.quote--main-blog-pictures img{
+    margin: 10px 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+@media(max-width:1400px){
+    .quote--container {
+        align-items: center;
+    }
+
+    .quote--container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .quote--main-about{
+        width: 40%;
+        margin: 20px 20px 20px 0;
+    }
+    
+    .quote--main-about:first-child{
+        margin: 20px 20px 20px 0;
+    }
+
+    .quote--main-quote{
+        width: 100%;
+        height: 500px;
+    } 
+  }
+
+  @media(max-width:1400px){
+
+  }
