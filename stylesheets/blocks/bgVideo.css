@@ -1,7 +1,7 @@
 /* фоновое видео */
 .bgVideo {
 	position: relative;
-	height: 120vh;
+	height: 150vh;
 	width: 100%;
 }
 .bgVideo video {
@@ -11,130 +11,126 @@
 	object-fit: cover;
 	object-position: center center;
 }
-.bgVideo h1 {
+.bgVideo>h1 {
 	margin: 0 auto;
 
 	position: absolute;
-    top: 50%;
+    top: 34%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 	
 	/* шрифт */
-	text-align: center;
-	font-weight: bold;
+	/*font-family: "Russo One";*/
 	color: white;
-	font-size: 40px;
+	font-weight: 400;
+	font-size: 64px;
 }
 
-
+.bgVideo span{
+	color: var(--blue-light);
+	text-shadow: 0px 0px 10px var(--blue-light);
+}
 .bgVideo--footer{
 	position: absolute;
-	bottom: 225px;
 	display: flex;
-	justify-content: center;
-	height: 100px;
-	width:100%
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	bottom: 0;
+
+}
+.bgVideo--footer>p {
+	font-family: 'Russo One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+	color: white;
 }
 .bgVideo--block{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	height: 100%;
-	
-	background-color: rgb(255, 255, 255,0.2);
-	box-shadow: 0px 0px 1px 1px inset white;
+	margin-bottom: 30px;
 	color: white;
-	min-width: 225px;
-	max-width: 15%;
-	padding: 0 10px;
-	margin: 0 10px;
-	flex-grow: 1;
-	transition: all linear 1s
+	width: 300px;
 }
-.bgVideo--block-double{
-	width: 225px;
+.bgVideo--container{
+	width: 80%;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: space-between;
-	padding: 0 10px;
-	
+	height: 350px;
+	padding: 40px 0;
 }
-.bgVideo--block-double .bgVideo--block{
-	padding: 0;
+.bgVideo--container>h1{
+	font-family: 'Russo One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 77px;
+	text-transform: uppercase;
+	color: #FFFFFF;
 	margin: 0;
-	margin-bottom: 10px;
-	height: 50%;
+	padding: 0;
+	width: 46%;
 }
 
-.bgVideo--block-blue{
-	max-width: none;
-	background-color: rgb(0,112, 175, 0.2);
-	width: 35%;
+.bgVideo--link{
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	height: 100%;
+	width: 50%;
+	margin-bottom: 15px;
 }
-.bgVideo--block-double .button_text{
-	width: 100%;
-	background-color: white;
-}
-.bgVideo--block-double .border_button{
-	border: 1px solid white;
-}
-.bgVideo--block-double .primary{
-	color: black;
-}
-.bgVideo--block-double .secondary{
-	color: white;
-}
-.bgVideo--block-double .button_text::before{
-	background-color: var(--blue-dark);
-}
-/* стрелки */
 
-.bgVideo-arrow {
+.bgVideo--arrow {
 	position: absolute;
-	width: 120px;
-	height: 75px;
-	background: url(../../images/svg/bgArrow/Arrow_1.svg), url(../../images/svg/bgArrow/Arrow_2.svg) ;
+	top: 34%;
+	
+	display: flex;
+	flex-direction: column;
+
 	background-repeat: no-repeat;
 	background-position: 0 center, 0 center ;
 	cursor: pointer;
-	background-repeat: repeat-x;
-	animation: move 7s linear infinite;
-
+	text-transform: uppercase;
 }
-.bgVideo-arrow:hover{
-	animation: move 1s linear infinite;
+.bgVideo--arrow>p {
+	font-family: "Russo One",sans-serif;
+	font-size: 24px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	margin: 0;
 }
-@keyframes move {
-	100% {background-position: -108px center , -71px center } /*1 число - размер svg*/
-}
-@-webkit-keyframes move {
-	100% {background-position: center 150px}
-}
-@-o-keyframes move {
-	100% {background-position: center 150px}
-}
-@-moz-keyframes move {
-	100% {background-position: center 150px}
-} 
-.bgVideo-arrowLeft {
-	top: 40%;
+.bgVideo--arrow:nth-of-type(1){
 	left: 40px;
-
+	align-items:flex-end
 }
-.bgVideo-arrowRight {
-	top: 40%;
+.bgVideo--arrow:nth-of-type(2){
 	right: 40px;
-	transform:rotate(180deg);
+	align-items:flex-start
 }
-.bgVideo-arrowDown {
+.bgVideo--arrowLeft {
+	background: url(../../images/svg/bgArrow/arrow_left.svg) ;
+	width: 200px;
+	height: 55px;
+}
+.bgVideo--arrowRight {
+	width: 200px;
+	height: 55px;
+	background: url(../../images/svg/bgArrow/arrow_right.svg) ;
+}
+.bgVideo--arrowDown {
 	position: relative;
-	width: 100px;
-	height: 100px;
-	transform:rotate(-90deg);
+	width: 25px;
+	height: 65px;
+	background: url(../../images/svg/bgArrow/arrow_down.svg) ;
+
+	margin-bottom: 40px;
 }
 
 
@@ -161,7 +157,7 @@
 	}
 }
 @media screen and (max-width: 900px) {
-	.bgVideo-arrowLeft,.bgVideo-arrowRight{
+	.bgVideo--arrowLeft,.bgVideo--arrowRight{
 		display: none;
 	}
 	.bgVideo h1{

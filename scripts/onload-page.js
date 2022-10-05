@@ -6,7 +6,7 @@ function PageOnload() {
 	/* после загрузки */
 	window.onload = function () {
 		/* смена изображений при наведении */
-		ChangeImageLifeAndScience();
+		ChangeImageLife();
 
 		/* Запуск скрипта для блока c 3D турами*/
 		setActiveTour();
@@ -31,49 +31,43 @@ function disablecontext(e) {
 }
 
 /* смена изображений при наведении */
-function ChangeImageLifeAndScience() {
-	const lifeAndScienceBlocks = document.getElementsByClassName("lifeAndScience");
+function ChangeImageLife() {
+	const lifeBlocks = document.getElementsByClassName("life");
 	
 
-	[...lifeAndScienceBlocks].forEach(block => {
-		const textLeft = block.getElementsByClassName("lifeAndScience-left")[0];
-		const textRight = block.getElementsByClassName("lifeAndScience-right")[0];
-		const slides = block.getElementsByClassName("lifeAndScience--background-part");
-		const buttonLeft = textLeft.getElementsByClassName("lifeAndScience-button")[0];
-		const buttonRight = textRight.getElementsByClassName("lifeAndScience-button")[0];
-		const iconLeft = textLeft.getElementsByTagName("img")[0];
-		const iconRight = textRight.getElementsByTagName("img")[0];
+	[...lifeBlocks].forEach(block => {
+		const textBlocks= block.getElementsByClassName("life--block");
+		const slides = block.getElementsByClassName("life--background-part");
+		const buttonLeft = textBlocks[0].querySelector("era-btn");
+		const buttonRight = textBlocks[1].querySelector("era-btn");
 		
 		block.addEventListener("mousemove", function (event) {
 			if (window.innerWidth <= 900) { return }
 
-			if (event.target.className != "lifeAndScience-textHead") {	
+			if (event.target.className != "life--textHead") {	
 				if (event.clientX < window.innerWidth / 2) {
-					slides[0].style.right="0%";
-					slides[1].style.right="100%";
-					/* скрытие-показ кнопок */
-					buttonLeft.style.cssText = "opacity: 1; height: 34px; margin: 0 0 5% 0; visibility: visible;";
-					buttonRight.style.cssText = "opacity: 0; height: 0; margin: 0; visibility: hidden;";
-	
-					/* анимация текста */
-					textLeft.style.cssText = "color: white; transform: translateY(-20%);";
-					textRight.style.cssText = "color: DarkGray; transform: translateY(10%);";
-					iconLeft.style.opacity="1"
-					iconRight.style.opacity="0.6"
-				}
-				else {
-					slides[0].style.right="-100%";
-					slides[1].style.right="0%";
+					slides[0].style.opacity="0";
+					slides[1].style.opacity="1";
 
 					/* скрытие-показ кнопок */
-					buttonLeft.style.cssText = "opacity: 0; height: 0; margin: 0; visibility: hidden;";
-					buttonRight.style.cssText = "opacity: 1; height: 34px; margin: 0 0 5% 0; visibility: visible;";
+					buttonLeft.style.cssText = "opacity: 1; height: 60px; margin: 0 0 5% 0;";
+					buttonRight.style.cssText = "opacity: 0; height: 0; margin: 0; ";
 	
 					/* анимация текста */
-					textLeft.style.cssText = "color: DarkGray; transform: translateY(10%);";
-					textRight.style.cssText = "color: white; transform: translateY(-20%);";
-					iconRight.style.opacity="1"
-					iconLeft.style.opacity="0.6"
+					textBlocks[0].style.cssText = "color: white; transform: translateY(-20%);";
+					textBlocks[1].style.cssText = "color: DarkGray; transform: translateY(0%);";
+				}
+				else {
+					slides[1].style.opacity="0";
+					slides[0].style.opacity="1";
+
+					/* скрытие-показ кнопок */
+					buttonLeft.style.cssText = "opacity: 0; height: 0; margin: 0; ";
+					buttonRight.style.cssText = "opacity: 1; height: 34px; margin: 0 0 5% 0;"
+	
+					/* анимация текста */
+					textBlocks[0].style.cssText = "color: DarkGray; transform: translateY(0%);";
+					textBlocks[1].style.cssText = "color: white; transform: translateY(-20%);";
 				}
 			}
 		});
