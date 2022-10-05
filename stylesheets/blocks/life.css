@@ -1,0 +1,218 @@
+/* казармы и компьютеры */
+.life {
+	position: relative;
+	height: 1000px;
+
+	background-position: bottom;
+	background-repeat: no-repeat;
+
+	background-size: cover; /* cовременные браузеры */
+	-webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+	-moz-background-size: cover; /* Firefox 3.6+ */
+	-o-background-size: cover; /* Opera 9.6+ */
+	background-size: cover; /* Современные браузеры */
+
+	max-height: 800px;
+}
+
+.life--textHead {
+	top: -150px;
+	left: 450px;
+	position: absolute;
+	height: 30%;
+	width: 50%;
+	margin: 0 auto;
+	
+	background-color: white;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column
+}
+
+.life--head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.life--head p{
+	font-size: 32px;
+	font-weight: bold;
+}
+
+
+.life--textHead .life--text {
+	font-weight: normal;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.life--wrapper {
+	height: 100%;
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	min-width: 1100px;
+}
+
+.life--line {
+	width: 1px;
+	height: 100%;
+	display: inline;
+	background-color: white;
+	z-index: 1;
+}
+
+.life--block {
+	font-weight: bold;
+	font-size: 24px;
+	color: #FFFFFF;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 50%;
+	height: 200px;
+	/* скорость анимации */
+	transition: 0.5s linear;
+	margin: 0 20px;
+
+    z-index: 4;
+}
+
+/*левый по умолчанию*/
+.life--block:nth-of-type(1){
+	transform: translateY(0%);
+	opacity: 0.8;
+
+}
+/*правый по умолчанию*/
+.life--block:nth-of-type(2) {
+	transform: translateY(-20%);
+}
+
+.life--block p {
+	text-align: left;
+}
+
+.life--text {
+	margin: 15px 0;
+	font-family: raleway_m,sans-serif;
+	font-weight: 400;
+}
+
+.bacSmall{
+	display: none;
+}
+.life--background{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #6FDBDB;
+	overflow: hidden;
+	filter: brightness(0.4);
+}
+.life--background-part{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: linear all 0.5s;
+}
+#life-right, #science-right{
+	right: 0%;
+}
+#barracks-tours .tour:nth-child(2) .tour--preview, #life-left{
+	background: center no-repeat url('../../images/blocks/life0.jpg');
+	background-size: cover; /* cовременные браузеры */
+	-webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+	-moz-background-size: cover; /* Firefox 3.6+ */
+	-o-background-size: cover; /* Opera 9.6+ */
+}
+#barracks-tours .tour:nth-child(3) .tour--preview, #life-right{
+	background: center url('../../images/blocks/life1.jpg');
+	background-size: cover; /* cовременные браузеры */
+	-webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+	-moz-background-size: cover; /* Firefox 3.6+ */
+	-o-background-size: cover; /* Opera 9.6+ */
+}
+#science-tours .tour:nth-child(2) .tour--preview, #science-left{
+	background: center no-repeat url('../../images/blocks/science0.jpg');
+	background-size: cover; /* cовременные браузеры */
+	-webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+	-moz-background-size: cover; /* Firefox 3.6+ */
+	-o-background-size: cover; /* Opera 9.6+ */
+}
+#science-tours  .tour:nth-child(3) .tour--preview, #science-right{
+	background: center url('../../images/blocks/science1.jpg');
+	background-size: cover; /* cовременные браузеры */
+	-webkit-background-size: cover; /* Safari 3.1+ и Chrome 4.0+ */
+	-moz-background-size: cover; /* Firefox 3.6+ */
+	-o-background-size: cover; /* Opera 9.6+ */
+}
+@media screen and (max-width: 1330px) {
+
+
+	.lifeAndScience-wrapper {
+		height: 100%;
+	}
+
+	.lifeAndScience-textHead {
+		height: 23%;
+		width: 60%;
+	}
+
+	.lifeAndScience {
+		height: 900px;
+	}
+
+	
+	.lifeAndScience-left .lifeAndScience-head p,
+	.lifeAndScience-right .lifeAndScience-head p{
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.lifeAndScience {
+		height: 800px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.lifeAndScience{
+		display: none;
+	}
+	.bacSmall{
+		display: flex;
+		background: linear-gradient(260.01deg, #6FDBDB -5.27%, rgba(141, 141, 141, 0) 112.36%);
+	}
+	.lifeAndScience-textHead {
+		height: 20%;
+		width: 100%;
+	}
+	.bacSmall .tour{
+		margin: 2px 0;
+	}
+	.bacSmall :nth-child(2){
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.lifeAndScience-left,
+	.lifeAndScience-right {
+		transform: translateY(0%);
+		color: white;
+	}
+
+	.lifeAndScience-right .lifeAndScience-button,
+	.lifeAndScience-left .lifeAndScience-button {
+		height: 34px;
+		margin: 0 0 5% 0;
+		visibility: visible;
+	}
+}
