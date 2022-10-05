@@ -36,20 +36,19 @@
 	<link rel="stylesheet" href="stylesheets/button.css">
 	<link rel="stylesheet" href="stylesheets/headers.css">
 	<link rel="stylesheet" href="stylesheets/particles.css">
-	<link rel="stylesheet" href="stylesheets/slider-fok.css">
-	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
 
 
 	<link rel="stylesheet" href="stylesheets/blocks/bgVideo.css">
-	<link rel="stylesheet" href="stylesheets/blocks/territory.css">
+	<link rel="stylesheet" href="stylesheets/blocks/mainVideo.css">
 	<link rel="stylesheet" href="stylesheets/blocks/mainVideoMini.css">
 	<link rel="stylesheet" href="stylesheets/blocks/science.css">
 	<link rel="stylesheet" href="stylesheets/blocks/invite.css">
 	<link rel="stylesheet" href="stylesheets/blocks/curators.css">
-	<link rel="stylesheet" href="stylesheets/blocks/health.css">
-	<link rel="stylesheet" href="stylesheets/blocks/life.css">
+	<link rel="stylesheet" href="stylesheets/blocks/tours.css">
+	<link rel="stylesheet" href="stylesheets/blocks/lifeAndScience.css">
 	<link rel="stylesheet" href="stylesheets/blocks/numbers.css">
 	<link rel="stylesheet" href="stylesheets/blocks/info.css">
+	<link rel="stylesheet" href="stylesheets/blocks/infoMini.css">
 </head>
 
 <body class="stopScroll">
@@ -115,75 +114,136 @@
 			<source src="video/bgVideo.mp4" type="video/mp4">
 			</source>
 		</video>
-		<h1>ПЕРВЫЙ <br>ВОЕННЫЙ <br> <span> НАУКОГРАД </span></h1>
+		<h1>ПЕРВЫЙ ВОЕННЫЙ НАУКОГРАД</h1>
 
-		<div class="bgVideo--arrow ">
-			<p>Инновации </p>
-			<div class = "bgVideo--arrowLeft"></div>	
-		</div>
-		<div class="bgVideo--arrow ">
-			<p>Главная </p>
-			<div class = "bgVideo--arrowRight"></div>	
-		</div>
+		<div class="bgVideo-arrow bgVideo-arrowLeft"></div>
+		<div class="bgVideo-arrow bgVideo-arrowRight"></div>
 		<div class="bgVideo--footer">
-			<p>Хочешь здесь служить?</p>
-			<div class="bgVideo--arrowDown"></div>
-			<div class="bgVideo--container">
-				<h1>Сделай первый шаг навстречу инновациям!</h1>
-				<div class="bgVideo--link">
-					<div class="bgVideo--block ">Каждый может внести вклад в инновационные технологии вооруженных сил</div>
-					<era-btn content="Связаться"> </era-btn>
+			<div class="bgVideo--block bgVideo--block-blue">Отправь нам свою почту.
+				Сделай первый шаг навстречу инновациям!</div>
+			<div class="bgVideo--block-double">
+				<div class="bgVideo--block">Хочешь здесь служить?</div>
+				<div class="button_text ">
+					<div class="border_button "></div>
+					<div class="primary  text">Связаться</div>
+					<div class="secondary text">Связаться</div>
 				</div>
-			
+			</div>
+			<div class="bgVideo--block bgVideo--block-blue">Каждый может внести вклад в инновационные технологии вооруженных сил</div>
+			<div class="bgVideo-arrow bgVideo-arrowDown"></div>
+			<div class="bgVideo--block ">Подробнее</div>
+		</div>
+	</section>
+
+	<!-- научная деятельность и робототехника -->
+	<section class="lifeAndScience lifeAndScience2" id="science">
+		<div class="lifeAndScience--background">
+			<div class="lifeAndScience--background-part" id="science-left"></div>
+			<div class="lifeAndScience--background-part" id="science-right"></div>
+		</div>
+		
+		<div class="header--container">
+			<!-- Частицы -->
+				<!-- <div class="header--particles">
+					<div class="header--particles_layer" >
+						<div class="header--particle"></div>
+						<div class="header--particle "></div>
+					</div>
+					<div class="header--particles_layer" >
+						<div class="header--particle"></div>
+					</div>
+					<div class="header--particles_layer" >
+						<div class="header--particle"></div>
+					</div>
+				</div> -->
+				<div class="headersTextHead ">
+					<p class="headers-head">НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ</p>
+					<p class="headers-text">Посети часть лабораторий</p>
+				</div>
+			</div>
+		</div>
+		<div class="lifeAndScience-wrapper">
+			<div class="lifeAndScience-line"></div>
+
+			<div class="lifeAndScience-left">
+				<div class="lifeAndScience-head">
+					<p>Медицина</p>
+					<img src="images/svg/lifeAndScience/heart.svg" alt="">
+				</div>
+				<p class="lifeAndScience-text">Посмотри на самое современное оборудование и инновационные проекты</p>
+
+				<div class="lifeAndScience-button">
+					<img class="lifeAndScience-AR" src="images/svg/cube-white.svg">
+					<div class="button_text">
+						<div class="border_button"></div>
+						<div class="primary text">3D-Тур</div>
+						<div class="secondary text">3D-Тур</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="lifeAndScience-line"></div>
+
+			<div class="lifeAndScience-right">
+				<div class="lifeAndScience-head">
+					<p>Робототехника</p>
+					<img src="images/svg/lifeAndScience/mechanism.svg" alt="">
+				</div>
+				<p class="lifeAndScience-text">Это целая индустрия, включающая большое количество направлений в науке и исследованиях.</p>
+
+				<div class="lifeAndScience-button">
+					<img class="lifeAndScience-AR" src="images/svg/cube-white.svg">
+					<div class="button_text">
+						<div class="border_button"></div>
+						<div class="primary text">3D-тур</div>
+						<div class="secondary text">3D-тур</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="lifeAndScience-line"></div>
+		</div>
+	</section>
+
+	<!-- научная деятельность и робототехника под маленькие экраны -->
+	<section class="tours bacSmall" id="science-tours">
+		<div class="header--back ">
+			<div class="header--container">
+				<div class="headersTextHead ">
+					<p class="headers-head">НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ</p>
+					<p class="headers-text">Посети часть лабораторий</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="tour">
+			<h3>Медицина</h3>
+			<div class="tour--preview"></div>
+			<p class="tour--info">Посмотри на самое современное оборудование и инновационные проекты</p>
+			<div class="button_text ">
+				<div class="border_button "></div>
+				<div class="primary  text">3D-Тур</div>
+				<div class="secondary text">3D-Тур</div>
+			</div>
+		</div>
+
+		<div class="tour">
+			<h3>Робототехника</h3>
+			<div class="tour--preview"></div>
+			<p class="tour--info">Это целая индустрия, включающая большое количество направлений в науке и исследованиях.</p>
+			<div class="button_text ">
+				<div class="border_button "></div>
+				<div class="primary  text">3D-Тур</div>
+				<div class="secondary text">3D-Тур</div>
 			</div>
 		</div>
 	</section>
 
-	
-	
 
-	<div class="header--container">
-		<div class="header--container-small">
-			<h1 class="header--head">Быт оператора</h1>
-			<p class="header--text">Узнай как живут операторы научных рот,погрузившись в 3D тур по помещениям казармы</p>
-		</div>
-	</div>
-
-	
-
-	<section class="life" id = "life">
-		<div class="life--background">
-			<div class="life--background-part" id="life-left"></div>
-			<div class="life--background-part" id="life-right"></div>
-		</div>
-		
-		
-		<div class="life--wrapper">
-			<div class="life--line"></div>
-			<div class="life--block">
-				<div class="life--head">
-					<p>Казармы <br>роты </p>
-				</div>
-				<p class="life--text">Погрузись в мир жилых помещений операторов</p>
-				<era-btn></era-btn>
-			</div>
-
-			<div class="life--line"></div>
-
-			<div class="life--block">
-				<div class="life--head">
-					<p>Компьютерный класс</p>
-				</div>
-				<p class="life--text">Пройдись по компьютерному классу и лекторию</p>
-				<era-btn></era-btn>
-			</div>
-
-			<div class="life--line"></div>
-		</div>
-	</section>
+	<hr class="line-medium"><br>
+	<hr class="line-min"><br>
 
 	<section class="info">
-		<div class="info--gradient"></div>
 		<div class="info--container">
 			<div class="info--block">
 				<h2 class="info--block-header">320</h2>
@@ -197,54 +257,147 @@
 				<h2 class="info--block-header">16</h2>
 				<p class="info--block-text">Научных направлений</p>
 			</div>
-			<div class="info--block">
-				<p class="info--block-text">Связаться с нами</p>
-			</div>
-			<div class="info--block-empty"> </div>
-			<div class="info--block-empty"> </div>
-			<div class="info--block-empty"> </div>
-			<div class="info--block-empty"> </div>
+			<div class="info--mainCircle"></div>
+			<div class="info--circle info--circle-center"></div>
+			<div class="info--circle info--circle-inside"></div>
+			<div class="info--circle info--circle-outside"></div>
 
 		</div>
-		<div class="info--text-container">
-			<div class="info--text">Текст о расположении Технополиса, о его преимуществах, размером в один абзац
+		<div class="info--image"></div>
+	</section>
+
+	<!-- === Инфографика под маленькие экраны === -->
+	<section class="infoMini">
+		<hr class="line-max"><br>
+		<hr class="line-max"><br>
+			<div class="infoMini-container">
+				<div class="infoMini--text">
+					<h2>320</h2><p>ПРИЗЫВНИКОВ</p>
+				</div>
+				<img src="images/svg/infoBlock/Vector 840.svg" alt="">
+				<div class="infoMini--text">
+					<p>НАУЧНЫХ РОТ</p><h2>8</h2>
+				</div>
+				<img src="images/svg/infoBlock/Vector 841.svg" alt="">
+				<div class="infoMini--text">
+					<h2>16</h2><p>НАУЧНЫХ <br> НАПРАВЛЕНИЙ</p>
+				</div>
+				<div class="button_text">
+					<div class="border_button"></div>
+					<div class="primary text">Подробнее</div>
+					<div class="secondary text">Подробнее</div>
+				</div>
 			</div>
-			<era-btn content="Подробнее"></era-btn>
+		<hr class="line-max"><br>
+		<hr class="line-max"><br>
+	</section>
+
+	<!-- === Казармы и компьютеры === -->
+	<section class="lifeAndScience" id = "life">
+		<div class="lifeAndScience--background">
+			<div class="lifeAndScience--background-part" id="life-left"></div>
+			<div class="lifeAndScience--background-part" id="life-right"></div>
+		</div>
+		<div class="header--container">
+			<!-- Частицы -->
+			<!-- <div class="header--particles">
+				<div class="header--particles_layer" >
+					<div class="header--particle"></div>
+					<div class="header--particle "></div>
+				</div>
+				<div class="header--particles_layer" >
+					<div class="header--particle"></div>
+				</div>
+				<div class="header--particles_layer" >
+					<div class="header--particle"></div>
+				</div>
+			</div> -->
+			<div class="headersTextHead headersTextHead--blue">
+				<p class="headers-head">БЫТ ОПЕРАТОРА</p>
+				<p class="headers-text">Узнай как живут операторы научных рот,погрузившись в 3D тур по помещениям казармы</p>
+			</div>
+		</div>
+		
+		<div class="lifeAndScience-wrapper">
+			<div class="lifeAndScience-line"></div>
+			<div class="lifeAndScience-left">
+				<div class="lifeAndScience-head">
+					<p>Казармы <br>роты </p>
+					<img src="images/svg/lifeAndScience/bed.svg" alt="">
+				</div>
+				
+				<p class="lifeAndScience-text">Погрузись в мир жилых помещений операторов</p>
+
+				<div class="lifeAndScience-button">
+					<img class="lifeAndScience-AR" src="images/svg/cube-white.svg">
+					<div class="button_text">
+						<div class="border_button"></div>
+						<div class="primary text">3D-Тур</div>
+						<div class="secondary text">3D-Тур</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="lifeAndScience-line"></div>
+
+			<div class="lifeAndScience-right">
+				<div class="lifeAndScience-head">
+					<p>Компьютерный класс</p>
+					<img src="images/svg/lifeAndScience/comp.svg" alt="">
+				</div>
+				<p class="lifeAndScience-text">Пройдись по компьютерному классу и лекторию</p>
+
+				<div class="lifeAndScience-button">
+					<img class="lifeAndScience-AR" src="images/svg/cube-white.svg">
+					<div class="button_text">
+						<div class="border_button"></div>
+						<div class="primary text">3D-тур</div>
+						<div class="secondary text">3D-тур</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="lifeAndScience-line"></div>
 		</div>
 	</section>
 
-	<!-- научная деятельность и робототехника -->
-	<section class="science" id="science">
-		<div class="science--header ">
-			<p>Научная деятельность</p>
-			<div class="science--arrows">
-				<div class="science--arrow science--arrow-disabled"></div>
-				<div class="science--arrow"></div>
+	<!-- === Казармы и компьютеры под маленькие экраны === -->
+	<section class="tours bacSmall" id="barracks-tours">
+		<div class="header--back ">
+			<div class="header--container">
+				<div class="headersTextHead headersTextHead--blue">
+					<p class="headers-head">БЫТ ОПЕРАТОРА</p>
+					<p class="headers-text">Узнай как живут операторы научных рот,погрузившись в 3D тур по помещениям казармы</p>
+				</div>
 			</div>
 		</div>
-		<div class="science--directions">
-			<div class="science--direction">
-				<h1 class="science--direction-header"> Медицинская лаборатория</h1>
-				<p class="science--direction-text"> Абзац про медицинскую лабораторию</p>
-				<a class="science--direction-link" href="#"> Ссылка на главную</a>
-				<era-btn secondarycolor="black" maincolor="white"></era-btn>
+
+		<div class="tour">
+			<h3>Казармы роты</h3>
+			<div class="tour--preview"></div>
+			<p class="tour--info">Погрузись в мир жилых помещений операторов</p>
+			<div class="button_text ">
+				<div class="border_button "></div>
+				<div class="primary  text">3D-Тур</div>
+				<div class="secondary text">3D-Тур</div>
 			</div>
-			
-			<div class="science--preview"></div>
-	
-			<div class="science--direction science--direction-inactive">
-				<h1 class="science--direction-header"> Лаборатория робототехники</h1>
-				<p class="science--direction-text">Абзац про лабораторию робототехники</p>
-				<a class="science--direction-link" href="#"> Ссылка на главную</a>
-				<era-btn secondarycolor="black" maincolor="white"></era-btn>
+		</div>
+
+		<div class="tour">
+			<h3>Компьютерный класс</h3>
+			<div class="tour--preview"></div>
+			<p class="tour--info">Пройдись по компьютерному классу и лекторию</p>
+			<div class="button_text ">
+				<div class="border_button "></div>
+				<div class="primary  text">3D-Тур</div>
+				<div class="secondary text">3D-Тур</div>
 			</div>
-			<div class="science--preview"></div>
 		</div>
 	</section>
 
-	
 	<section class="numbers">
 		<h2>Преимущества службы в Технополисе “ЭРА”</h2>
+
 		<div class="number">
 			<img class="barracksAndComputers-AR" src="images/svg/icons/sea.svg">
 			<p>Проживание на берегу Черного моря</p>
@@ -261,100 +414,84 @@
 			<img class="barracksAndComputers-AR" src="images/svg/icons/coin.svg">
 			<p>Возможность дальнейшего трудоустройства </p>
 		</div>
-		<div class="number--footer">
-			<hr class="number--hr">
-			<era-btn content="Хочу сюда!"></era-btn>
-		</div>
 	</section> 
 
-	<div class="swiper--main">
-		<div class="description">
-			<div class="logo">ФИЗКУЛЬТУРНО-ОЗДОРОВИТЕЛЬНЫЙ КОМПЛЕКС</div>
-			<div class="health--header-container">
-				<div class="health--part">
-					<h3 class="health--part-header">Бассейн</h3>
-					<div class="health--part-icon"></div>
-				</div>
-				<div class="health--part">
-					<h3 class="health--part-header">Тренажерный зал</h3>
-					<div class="health--part-icon"></div>
-				</div>
-				<div class="health--part">
-					<h3 class="health--part-header">Ледовый дворец</h3>
-					<div class="health--part-icon"></div>
-				</div>
-				<div class="health--part">
-					<h3 class="health--part-header">Настольный теннис</h3>
-					<div class="health--part-icon"></div>
-				</div>
-			</div>
-			
-			<div class="health--text-container">
-				<p class="health--text">Лорем	йцуйцуйвывйцу йуйцеарнгш уке нш ааиа adipisicing elit. Necessitatibus, ipsam. Maxime laboriosam hic possimus, velit perferendis error! Architecto voluptates consequatur harum simili.</p>
-				<p class="health--text">Nostrum, possimus perspiciatis impedit maxime tempore eos quia deserunt illo, soluta dicta aut non voluptatibus delectus distinctio accusamus repudiandae eum. Possimus, sit!</p>
-				<p class="health--text">Lorem, ipsum dolor. ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ipsam. Maxime laboriosam hic possimus, velit perferendis error! Architecto voluptates consequatur harum simili.</p>
-				<p class="health--text">Теннис. ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ipsam. Maxime laboriosam hic possimus, velit perferendis error! Architecto voluptates consequatur harum simili.</p>
-			</div>
-			<era-btn></era-btn>
 
-		</div>
-		<h1 class="health--header"></h1>
-			
-			
-		<div class="slider swiper  slider_main">
-			<div class="swiper-wrapper slider__wrapper">
-				<div class="swiper-slide slider__item">
-					<div class = "slider__img" data-swiper-parallax="20%" style="background-image:url(images/blocks/swimming\ pool.jpg)">
-					</div>
-				</div>
-				<div class="swiper-slide slider__item">
-					<div class = "slider__img" data-swiper-parallax="30%" style="background-image:url(images/blocks/gym.jpg)"></div>
-				</div>
-				<div class="swiper-slide slider__item">
-					<div class = "slider__img" data-swiper-parallax="20%" style="background-image:url(images//blocks/life0.jpg)"></div>
-				</div>
-				<div class="swiper-slide slider__item">
-					<div class = "slider__img" data-swiper-parallax="30%" style="background-image:url(images/blocks/food.jpg)">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="swiper slider slider_bg">
-			<div class="swiper-wrapper slier__wrapper">
-				<div class="swiper-slide slider__item">
-					<div class = "slider__img" data-swiper-parallax="20%" style="background-image:url(images/blocks/swimming\ pool.jpg)">
-					</div>
-				</div>
-				<div class="swiper-slide slider__item">
-					<div class = "slider__img" data-swiper-parallax="30%" style="background-image:url(images/blocks/gym.jpg)"></div>
-				</div>
-				<div class="swiper-slide slider__item">
-					<div class = "slider__img" data-swiper-parallax="20%" style="background-image:url(images/1.jpg)"></div>
-				</div>
-				<div class="swiper-slide slider__item">
-					<div class = "slider__img" data-swiper-parallax="30%" style="background-image:url(images/2.jpg)">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
+					
+	<!-- 3д туры -->
+	<section class="tours">
+		<div class="header--back header--back-blue">
 
-	<section class="territory">
-		<div class="territory--background">
-			<div class="territory--slide"></div>
-			<div class="territory--slide"></div>
+			<div class="header--container">
+					<!-- Частицы -->
+					<!-- <div class="header--particles">
+						<div class="header--particles_layer" >
+							<div class="header--particle"></div>
+							<div class="header--particle "></div>
+						</div>
+						<div class="header--particles_layer" >
+							<div class="header--particle"></div>
+						</div>
+						<div class="header--particles_layer" >
+							<div class="header--particle"></div>
+						</div>
+					</div> -->
+					<div class="headersTextHead headersTextHead--blue">
+						<p class="headers-head">ФИЗКУЛЬТУРНО-ОЗДОРОВИТЕЛЬНЫЙ КОМПЛЕКС</p>
+					</div>
+				</div>
+			</div>
+
+		<div class="tour">
+			<h3>Бассейн</h3>
+			<div class="tour--preview"></div>
+			<p class="tour--info">Плавание в бассейне очень полезно для здоровья операторов. Если хотите научиться плавать, то смело входите в воду.</p>
+			<div class="button_text ">
+				<div class="border_button "></div>
+				<div class="primary  text">3D-Тур</div>
+				<div class="secondary text">3D-Тур</div>
+			</div>
 		</div>
-		<div class="territory--container">
-			<h3 class="territory--header">Столовая операторов</h3>
-			<p class="territory--text">Интересно как и где питаются операторы научных рот, чтоб мозги всегда работали?</p>
-			<era-btn></era-btn>
+
+		<div class="tour">
+			<h3>Тренажерный зал</h3>
+			<div class="tour--preview"></div>
+			<p class="tour--info">Познакомьтесь с идеальном местом для тех, кто хочет обзавестись красивым и подтянутым телом.</p>
+			<div class="button_text ">
+				<div class="border_button "></div>
+				<div class="primary  text">3D-Тур</div>
+				<div class="secondary text">3D-Тур</div>
+			</div>
 		</div>
-		<div class="territory--container">
-			<h3 class="territory--header">Территория технополиса</h3>
-			<p class="territory--text">Технополис расположен на береговой линии Черного моря. На территории выстроена комфортная среда для научной деятельности и досуга.</p>
-			<era-btn></era-btn>
+		<div class="tour">
+			<h3>Настольный теннис</h3>
+			<div class="tour--preview"></div>
+			<p class="tour--info">Поиграйте в один из самых популярных видов спорта на Земле.</p>
+			<div class="button_text ">
+				<div class="border_button "></div>
+				<div class="primary  text">3D-Тур</div>
+				<div class="secondary text">3D-Тур</div>
+			</div>
+		</div>
+		<div class="tour">
+			<h3>Ледовый дворец</h3>
+			<div class="tour--preview"></div>
+			<p class="tour--info">Текст про ледовый дворец Los quaerat, reprehenderit deserunt. Qaspernatur itaque quia voluptatem soluta tenetur?</p>
+			<div class="button_text ">
+				<div class="border_button "></div>
+				<div class="primary  text">3D-Тур</div>
+				<div class="secondary text">3D-Тур</div>
+			</div>
 		</div>
 	</section>
+
+	<div class="delimeter">
+		<hr class="delimeter--line-min"></hr>
+		<hr class="delimeter--line-medium"></hr>
+		<hr class="delimeter--line-min"></hr>
+	</div>
+
 	<!-- пройдись по территории технополиса (видео) -->
 	<section class="main--video">
 		<video autoplay loop muted>
@@ -484,8 +621,5 @@
 	<script src="scripts/science.js"></script>
 	<script src="scripts/tours.js" ></script>
 	<script src="scripts/circle.js" ></script>
-	<script src="scripts/button.js" ></script>
-	<script src="libs/swiper/swiper-bundle.min.js"></script>
-	<script src="scripts/slider-fok.js" ></script>
 </body>
 </html>

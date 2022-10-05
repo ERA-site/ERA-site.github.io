@@ -1,34 +1,155 @@
+.header--back{
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(270deg, #FFFFFF 0%, var(--blue-dark) 72.7%, #FFFFFF 100%);
+    position: absolute;
+    top: 0;
+}
+.header--back-blue{
+    background: linear-gradient(270deg, var(--blue-dark) 0%, #FFFFFF 72.7%, var(--blue-dark) 100%);
+}
 .header--container{
-	content: "";
-    width: 100vw;
-    height: 300px;
-    background-color: white;    
-    display: flex;
-    justify-content: center;
+	top: -40px;
+	left: calc((100vw - 50vw - 160px) / 2);
+	position: absolute;
+	height: 120px;
+	width: 50vw;
+    z-index: 4;
 }
-.header--container-small{
-    width: 70%;
-    height: 400px;
-    background-color: white;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 1100px;
-    z-index: 1;
-}
-.header--head{
-    font-size: 64px;
-    font-weight: bold;
-    font-family: "Oswald",sans-serif;
+.headersTextHead {
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
+	width: 100%;
+    height: 100%;
+	
+	margin: 0 auto;
+	
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+    /* === "Параллелограмм" === */
+    -webkit-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+    /* === Декор общей фигуры === */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 4;
 }
-.header--text{
-    width: 60%;
+
+.headersTextHead:nth-of-type(3){
+    background: #0070afcc;
+    backdrop-filter: blur(10px);
+}
+
+.headersTextHead::after, .headersTextHead::before{
+    position: absolute;
+    content: "";
+    top: 0px; 
+        /* === "Параллелограмм" декор справа === */
+	-webkit-transform: skew(0deg);
+	-moz-transform: skew(0deg);
+	-o-transform: skew(0deg);
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+    /* === "Параллелограмм" декор справа (их размеры)=== */
+.headersTextHead::after{
+    right: -60px;
+    width: 40px;
+	height: 80px;
+}
+
+.headersTextHead::before{
+    right: -120px;
+    width: 40px;
+	height: 60px;
+}
+
+
+.headersTextHead p{
+    /* === Выравниваем текст, т.к. он находится в наклоне на 20* с фигурой === */
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+}
+
+.headers-head{
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--blue-dark);
+}
+
+.headers-text{
+    margin: 0 20px;
+    font-size: 20px;
     text-align: center;
-    letter-spacing: 0.3rem;
-    padding-top: 20px;
+    color: #000000;
+}
+
+
+.headersTextHead--blue, .headersTextHead--blue::after, .headersTextHead--blue::before{
+    background: #0070afcc;
+    backdrop-filter: blur(10px);
+}
+.headersTextHead--blue p{
+    color: white;
+
+}
+
+
+@media screen and (min-width: 950px) {
+    .header--back{
+        background: transparent;
+    }
+}
+@media screen and (max-width: 900px) {
+    /* === Меняем размер всему тексту + отступ слева (центруем) ===*/
+  
+    .headers-head{
+        font-size: 24px;
+    }
+
+    .headers-text{
+        font-size: 16px;
+    }
+    .header--container{
+        top: -20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .header--container{
+        left: 0;
+        width: 100%;
+    }
+    /* === Фигура "Параллелограмм'а" становится сплошным прямоугольником === */   
+    .headersTextHead{
+        -webkit-transform: skew(0deg);
+        -moz-transform: skew(0deg);
+        -o-transform: skew(0deg);
+
+        /* === уменьшается размер фигуры текст === */
+        left: 0px;
+        width: 100%;
+        top: 0px;
+        height: 100px;
+    }
+    /* === Пропадает декор "Параллелограмм'а" ===*/
+    .headersTextHead::after, .headersTextHead::before{
+        content: none;
+    }
+    /* === Выравнивается текст === */
+    .headersTextHead p{
+        -webkit-transform: skew(0deg);
+        -moz-transform: skew(0deg);
+        -o-transform: skew(0deg);
+    }
 }
